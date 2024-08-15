@@ -1,63 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-        <style>
-            #first{
-                display: flex;
-                justify-content: flex-end;
-            }
-            #first>div{
-                font-style: arial;
-                padding-top: 15px;
-            }
-            #first>div:hover
-            {
-                text-decoration: underline;
-            }
-            #second
-            {
-                display: flex;
-                
-            }
-            #second>input
-            {
-                background-color: #f8f7fa72;
-                border-color: #f8f7fa72;
-                border-style: solid;
-                border-radius: 3px;
-                position:relative;
-                top: 310px;
-                height: 35px;
-                
-            }
-            #second>input:hover
-            {
-                border-color: rgb(168, 168, 168);
-                border-width: thin;
-            }
-            #third:hover
-            {
-                box-shadow: 0.25px 0.25px 1.10px;
-            }
-
-        </style>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    .header{
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: center;
         
-    </head>
-    <body>
-        <div id="first" >
-            <div style="padding-right: 12px;">Images</div> 
-            <div style="padding-right: 15px;">advanced Search</div>
+    }
+    .leftside, .rightside, .bleft, .bright{
+        font-family: roboto;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+    .bleft div, .bright div{
+        margin: 15px;
+        
+    }
+    .leftside div{
+        margin-left: 23px;
+    }
+    .rightside div{
+        margin-right: 20px;
+    }
+    .title{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 23vh;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .search{
+        display: flex;
+        padding-left: 40px; /* adjust this value as needed */
+        flex: 1;
+        margin-top: 20px;
+        width: 570px;
+        height: 35px;
+        border-radius: 50px;
+        border: solid;
+        border-color:lightgray;
+        border-width: 0.75px;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5vh;
+        padding: 8px 15px;
+        border: none;
+        background-color: rgb(247, 247, 247);
+        margin-right: 15px;
+        border-radius: 4px;
+
+    }
+    .bottom{
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex:1;
+        
+    }
+    .bottom1{
+        margin-top: 100px;
+        display: flex;
+
+        background-color:rgb(247, 247, 247);
+        margin: -3;
+        padding: 12px;
+        border-bottom: solid;
+        border-color: rgb(175, 173, 173);
+        border-width: 0.25px;
+        font-family: roboto;
+    }
+    .bottom2{
+        display: flex;
+        background-color: rgb(247, 247, 247);
+    
+        padding: 6px 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+</head>
+<body style="margin: 0;">
+    <div class="header">
+        <div class="leftside">
+            <div>About</div>
+            <div>Store</div>
+        </div>
+        <div class="rightside">
+            <div>Gmail</div>
+            <div>Images</div>
+            <div><img src="cafd1856-11a2-4b13-8b2d-24b59c3f3ea8.png" alt=""></div>
+            <div><img style="margin-right: 10px; width: 30px; border-radius: 20px; " src="unnamed.jpg" alt=""></div>
         </div>
         
-        <form action="https://www.google.co.in/search?">
-            <img src="googlelogo_color_272x92dp.png" height="92" width="272" style="position: relative; left: 40%; top: 250px; ">
-            <input id="third" style="position: relative; left: 18.25%; top: 280px; width: 24%; padding: 12px 22px; border-radius: 100px; border-style:solid ; border-color: rgb(183, 180, 180); border-width: thin;" type="text" name="q">
-            <div id="second">
-                <input style=" left: 41%; "  type="submit" value="Google Search" >
-                <input style="left: 42.5%;"  type="submit" value="I'm feeling lucky" >
 
+    </div>
+    <div class="title">
+        <div>
+            <img src="googlelogo_color_272x92dp (1).png" alt="">
+        </div>
+        <div>
+            <form action="https://www.google.co.in/search?" style="display: flex; flex-direction: column;" >
+                <div style=" position: relative;">
+                    <input class="search" type="text" name="q">
+                    <img style="position: absolute; width: 25px;  right: 15px; top: 26px;" src="cec54872-1395-4859-a396-d22ab5ae3556.png" alt="">
+                    <img style="position: absolute; right: 56px; top: 27px;" src="987b6116-4676-477e-a1df-c53ff11271a1.png" alt="">
+                    <img style="width: 15px; position: absolute;   left: 15px; top: 31px;" src="icons8-search-50 (1).png" alt="">
+                    
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <input class="buttons" type="submit" value="Google Search">
+                    <button class="buttons" style="margin-right: 5px;">I'm Feeling Lucky</button>
+    
+                </div>
+               
+                    
+            </form>
+        </div>
+    </div>
+    
+   <div class="bottom" >
+        <div class="bottom1">
+            <div style="margin-left:12px ;">Canada</div>
+        </div>
+        <div class="bottom2">
+            <div class="bleft">
+                <div>Advertisement</div>
+                <div>Business</div>
+                <div>How Search Works</div>
             </div>
-        </form>
-    </body>
+            <div class="bright">
+                <div>Privacy</div>
+                <div>Terms</div>
+                <div>Settings</div>
+            </div>
+
+        </div>
+   </div>
+</body>
 </html>
