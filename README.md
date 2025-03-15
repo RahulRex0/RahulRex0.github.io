@@ -1,6 +1,6 @@
 # Google search page
 
-This is my first web page published. This is a cs50w project.
+my first web page hosted!.a cs50w project.
 
 you can check it out! from the link https://rahulrex0.github.io/
 
